@@ -24,11 +24,44 @@ void main() {
 		else if((sw4 != 0) && (sw3 != 0) && (sw2 == 0) && (sw1 != 0)) {
 			PAOUT = ~0x0C;
 		}
+		else if((sw4 != 0) && (sw3 != 0) && (sw2 == 0) && (sw1 == 0)) {
+			PAOUT = ~0x0F;
+		}
 		else if((sw4 != 0) && (sw3 == 0) && (sw2 != 0) && (sw1 != 0)) {
 			PAOUT = ~0x30;
 		}
+		else if((sw4 != 0) && (sw3 == 0) && (sw2 != 0) && (sw1 == 0)) {
+			PAOUT = ~0x33;
+		}
+		else if((sw4 != 0) && (sw3 == 0) && (sw2 == 0) && (sw1 != 0)) {
+			PAOUT = ~0x3C;
+		}
+		else if((sw4 != 0) && (sw3 == 0) && (sw2 == 0) && (sw1 == 0)) {
+			PAOUT = ~0x3F;
+		}
 		else if((sw4 == 0) && (sw3 != 0) && (sw2 != 0) && (sw1 != 0)) {
 			PAOUT = ~0xC0;
+		}
+		else if((sw4 == 0) && (sw3 != 0) && (sw2 != 0) && (sw1 == 0)) {
+			PAOUT = ~0xC3;
+		}
+		else if((sw4 == 0) && (sw3 != 0) && (sw2 == 0) && (sw1 != 0)) {
+			PAOUT = ~0xCC;
+		}
+		else if((sw4 == 0) && (sw3 != 0) && (sw2 == 0) && (sw1 == 0)) {
+			PAOUT = ~0xCF;
+		}
+		else if((sw4 == 0) && (sw3 == 0) && (sw2 != 0) && (sw1 != 0)) {
+			PAOUT = ~0xF0;
+		}
+		else if((sw4 == 0) && (sw3 == 0) && (sw2 != 0) && (sw1 == 0)) {
+			PAOUT = ~0xF3;
+		}
+		else if((sw4 == 0) && (sw3 == 0) && (sw2 == 0) && (sw1 != 0)) {
+			PAOUT = ~0xFC;
+		}
+		else if((sw4 == 0) && (sw3 == 0) && (sw2 == 0) && (sw1 == 0)) {
+			PAOUT = ~0xFF;
 		} else {
 			PAOUT = ~0x80; delay_ms(200);
 			PAOUT = ~0x40; delay_ms(200);
