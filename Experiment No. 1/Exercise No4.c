@@ -17,7 +17,6 @@ void main() {
     PBAF &= 0xF0;
     
     while(1) {
-        unsigned int i, j, seq1;
         if((sw4 != 0) && (sw3 != 0) && (sw2 != 0) && (sw1 == 0)) {
             PAOUT = ~0xCC; delay_ms(1000);
             PAOUT ^= ~0x00; delay_ms(1000);
