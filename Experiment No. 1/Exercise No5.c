@@ -33,12 +33,12 @@ void main() {
     while(1) {
         while((PrevSW3 == SW3) && (PrevSW2 == SW2) && (PrevSW1 == SW1) && (PrevSW0 == SW0));
         if(SW0) {
-            printf(" SW0 is open \t");
+            printf(" SW0 is open\t");
             PAOUT |= ~0x00;
         } else {
             printf(" SW0 is closed\t");
             PAOUT = ~0xCC; delay_ms(1000);
-			PAOUT = ~0x33; delay_ms(1000);
+	    PAOUT = ~0x33; delay_ms(1000);
         }
         if(SW1) {
             printf(" SW1 is open\t");
@@ -46,12 +46,12 @@ void main() {
         } else {
             printf(" SW1 is closed\t");
             PAOUT = ~0x03; delay_ms(1000);
-			PAOUT = ~0x06; delay_ms(1000);
-			PAOUT = ~0x0C; delay_ms(1000);
-			PAOUT = ~0x18; delay_ms(1000);
-			PAOUT = ~0x30; delay_ms(1000);
-			PAOUT = ~0x60; delay_ms(1000);
-			PAOUT = ~0xC0; delay_ms(1000);
+	    PAOUT = ~0x06; delay_ms(1000);
+	    PAOUT = ~0x0C; delay_ms(1000);
+	    PAOUT = ~0x18; delay_ms(1000);
+	    PAOUT = ~0x30; delay_ms(1000);
+	    PAOUT = ~0x60; delay_ms(1000);
+	    PAOUT = ~0xC0; delay_ms(1000);
         }
         if(SW2) {
             printf(" SW2 is open\t");
@@ -59,8 +59,8 @@ void main() {
         } else {
             printf(" SW2 is closed\t");
             PAOUT = ~0x3C; delay_ms(1000);
-			PAOUT = ~0x66; delay_ms(1000);
-			PAOUT = ~0xC3; delay_ms(1000);
+	    PAOUT = ~0x66; delay_ms(1000);
+	    PAOUT = ~0xC3; delay_ms(1000);
         }
         if(SW3) {
             printf(" SW3 is open\t");
