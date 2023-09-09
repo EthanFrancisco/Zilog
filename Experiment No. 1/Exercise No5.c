@@ -78,7 +78,7 @@ void main() {
 }
 
 void delay_ms(unsigned int delay) {
-	unsigned int x, y;
-	for(x = 0; x <= delay; x++)
-		for(y = 0; y <= 512; y++);
+    unsigned int x, y;
+    for(x = 0; x <= delay; x++)
+	for(y = 0; y <= 512; y++);
 }
