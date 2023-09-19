@@ -1,8 +1,8 @@
 #include <ez8.h>
 
-#define sw1 (PBIN & 0x01)
-#define sw2 (PBIN & 0x02)
-#define sw3 (PBIN & 0x04)
+#define sw1 (PBIN & 0x01) // x input
+#define sw2 (PBIN & 0x02) // y input
+#define sw3 (PBIN & 0x04) // z input
 
 void delay(unsigned int ms);
 
@@ -17,28 +17,28 @@ void main() {
 
     while(1) {
         if((sw3 == 0) && (sw2 == 0) && (sw1 == 0)) {
-            PAOUT = ~0x80;
+            PAOUT = ~0x80; // 10000000
         }
         else if((sw3 == 0) && (sw2 == 0) && (sw1 != 0)) {
-            PAOUT = ~0x40;
+            PAOUT = ~0x40; // 01000000
         }
         else if((sw3 == 0) && (sw2 != 0) && (sw1 == 0)) {
-            PAOUT = ~0x20;
+            PAOUT = ~0x20; // 00100000
         }
         else if((sw3 == 0) && (sw2 != 0) && (sw1 != 0)) {
-            PAOUT = ~0x10;
+            PAOUT = ~0x10; // 00010000
         }
         else if((sw3 != 0) && (sw2 == 0) && (sw1 == 0)) {
-            PAOUT = ~0x08;
+            PAOUT = ~0x08; // 00001000
         }
         else if((sw3 != 0) && (sw2 == 0) && (sw1 != 0)) {
-            PAOUT = ~0x04;
+            PAOUT = ~0x04; // 00000100
         }
         else if((sw3 != 0) && (sw2 != 0) && (sw1 == 0)) {
-            PAOUT = ~0x02;
+            PAOUT = ~0x02; // 00000010
         }
         else if((sw3 != 0) && (sw2 != 0) && (sw1 != 0)) {
-            PAOUT = ~0x01;
+            PAOUT = ~0x01; // 00000001
         }
     }
 }
