@@ -31,7 +31,7 @@ void main() {
             printf("PAOUT = %02X\n", PAOUT);
             delay(1000);
         }
-        if((sw1 != 0) && (sw2 != 0) && (sw3 != 0)) {
+        else if((sw1 != 0) && (sw2 != 0) && (sw3 != 0)) {
             PAOUT = ~0x70;
             printf("PAOUT = %02X\n", PAOUT);
             delay(1000);
