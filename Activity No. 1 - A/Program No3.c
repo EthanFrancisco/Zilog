@@ -14,12 +14,12 @@ void main() {
     PBAF = 0x00;
     while(1) {
 		if((sw1 != 0) || (sw2 != 0) || (sw3 != 0) || (sw4 != 0)) {
-			POUT |= 0x11; 		printf("Hex: %02X\n", POUT);  delay(1000);
-			POUT &= 0x26; 		printf("Hex: %02X\n", POUT);  delay(1000);
-			POUT ^= 0x0A; 		printf("Hex: %02X\n", POUT);  delay(1000);
-			POUT = POUT << 4;   printf("Hex: %02X\n", POUT);  delay(1000);
-			POUT = POUT >> 5;   printf("Hex: %02X\n", POUT);  delay(1000);
-		}
+			  POUT |= 0x11; 		  printf("Hex: %02X\n", POUT);  delay(1000);
+			  POUT &= 0x26; 		  printf("Hex: %02X\n", POUT);  delay(1000);
+			  POUT ^= 0x0A; 		  printf("Hex: %02X\n", POUT);  delay(1000);
+			  POUT = POUT << 4;   printf("Hex: %02X\n", POUT);  delay(1000);
+			  POUT = POUT >> 5;   printf("Hex: %02X\n", POUT);  delay(1000);
+		  }
     }
 }
 
