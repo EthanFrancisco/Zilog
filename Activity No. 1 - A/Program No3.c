@@ -1,3 +1,12 @@
+/*
+    a. set the first and fifth bits of the input to logic 1 and then
+    b. set the second, third and sixth bits to logic 0 and then
+    c. toggle the second and fourth bits and then
+    d. shift to the left by 4 positions and then
+    e. shift to the right by 5 positions
+    And display on monitor the result for each operation.
+*/
+
 #include <ez8.h>
 #include <stdio.h>
 
