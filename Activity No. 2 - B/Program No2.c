@@ -1,3 +1,12 @@
+/*
+	E A B  D0 D1 D2 D3
+	1 X X  1  1  1  1
+	0 0 0  0  1  1  1
+	0 0 1  1  0  1  1
+	0 1 0  1  1  0  1
+	0 1 1  1  1  1  0
+*/
+
 #include <ez8.h>
 #include <stdio.h>
 
