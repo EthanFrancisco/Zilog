@@ -66,7 +66,7 @@ void Read_UART0(void) {
 
 void Init_UART0(void) {
     DI();
-    SET_VECTOR(UART1_RX, Read_UART1);
+    SET_VECTOR(UART0_RX, Read_UART0);
     IRQ0ENH = 0x10;
     IRQ0ENL = 0x10;
     IRQ0 &= ~0x10;
