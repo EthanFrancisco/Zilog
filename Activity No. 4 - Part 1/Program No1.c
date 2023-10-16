@@ -57,7 +57,7 @@ void main() {
     PCHDE |= 0x0F;
 
     PBOUT &= 0xF0; PCOUT &= 0xF0;
-    InitSW();
+    initSW();
 }
 
 void InitSW(void) {
