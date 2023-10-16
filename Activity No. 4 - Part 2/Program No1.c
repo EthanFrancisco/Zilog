@@ -7,6 +7,7 @@ unsigned int MessageIndex = 0, MSG_LEN = 50;
 char Message[50];
 
 void Init_UART0(void);
+int POUT = ~0x55;
 
 void main() {
     PADD = 0x00;
@@ -17,17 +18,18 @@ void main() {
     init_uart(_UART0, _DEFFREQ, _DEFBAUD);
     select_port(_UART0);
     Init_UART0();
+    PAOUT = ~POUT;
     while(1) {
         if(strstr(Message, "A") != 0) {
-            PAOUT &= 0xEC;
+            PAOUT = (POUT &= 0xEC);
         } else if(strstr(Message, "E") != 0) {
-            PAOUT |= 0x2C;
+            PAOUT = (POUT |= 0x2C);
         } else if(strstr(Message, "I") != 0) {
-            PAOUT ^= 0x52;
+            PAOUT = (POUT ^= 0x52);
         } else if(strstr(Message, "O") != 0) {
-            PAOUT <<= 3;
+            PAOUT = (POUT <<= 3);
         } else if(strstr(Message, "U") != 0) {
-            PAOUT >>= 4;
+            PAOUT = (POUT >>= 4);
         }
     }
 }
