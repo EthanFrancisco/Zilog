@@ -7,7 +7,7 @@ unsigned int MessageIndex = 0, MSG_LEN = 50;
 char Message[50];
 
 void Init_UART0(void);
-int POUT = ~0x55;
+int POUT = 0x55;
 
 void main() {
     PADD = 0x00;
