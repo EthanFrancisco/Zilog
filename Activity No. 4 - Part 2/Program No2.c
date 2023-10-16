@@ -38,9 +38,9 @@ void main() {
             PAOUT = ~0x60; delay_ms(500);
             PAOUT = ~0xC0; delay_ms(500);
         } else if(strstr(Message, "SEQ3") != 0) {
-            PAOUT = 0x3C; delay_ms(500);
-            PAOUT = 0x66; delay_ms(500);
-            PAOUT = 0xC3; delay_ms(500);
+            PAOUT = ~0x3C; delay_ms(500);
+            PAOUT = ~0x66; delay_ms(500);
+            PAOUT = ~0xC3; delay_ms(500);
         }
     }
 }
