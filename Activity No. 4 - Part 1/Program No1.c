@@ -1,6 +1,6 @@
 #include <ez8.h>
 
-initSW(void);
+void initSW(void);
 void delay_ms(unsigned int delay);
 
 // Port B.0 to B.3 = Upper Nibble
