@@ -30,9 +30,9 @@ void Init_Timer(void) {
 #include <stdio.h>
 #include <sio.h>
 
-#define PRESCALER
-#define TMODE
-#define RELOAD
+#define PRESCALER   7
+#define TMODE       0x01
+#define RELOAD      28800
 
 void InitPort(void);
 void Init_Timer(void);
