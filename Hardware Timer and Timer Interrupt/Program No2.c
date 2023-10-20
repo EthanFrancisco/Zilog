@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <sio.h>
 
-#define PRESCALER
-#define TMODE
-#define RELOAD
-#define PWM
+#define PRESCALER   0x07
+#define TMODE       0x43
+#define RELOAD      57600
+#define PWM         14400
 
 void InitPort(void);
 void Init_Timer(void);
