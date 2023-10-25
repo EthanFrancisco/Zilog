@@ -12,33 +12,33 @@ void main() {
     PCDD |= 0x07;
     PCAF &= ~0x07;
     while(1) {
-        if((sensorL == 0) && (sensorC == 0) && (sensorR == 0)) {
+        if((sensorL != 0) && (sensorC != 0) && (sensorR != 0)) {
             PAOUT = ~0x81; delay_ms(500);
             PAOUT = ~0x42; delay_ms(500);
             PAOUT = ~0x24; delay_ms(500);
             PAOUT = ~0x18; delay_ms(500);
-        } else if((sensorL == 0) && (sensorC == 0) && (sensorR != 0)) {
+        } else if((sensorL != 0) && (sensorC != 0) && (sensorR == 0)) {
             PAOUT = ~0xC3; delay_ms(400);
             PAOUT = ~0x66; delay_ms(400);
             PAOUT = ~0x3C; delay_ms(400);
             PAOUT = ~0x99; delay_ms(400);
-        } else if((sensorL == 0) && (sensorC != 0) && (sensorR == 0)) {
+        } else if((sensorL != 0) && (sensorC == 0) && (sensorR != 0)) {
             PAOUT = ~0x18; delay_ms(300);
             PAOUT = ~0x24; delay_ms(300);
             PAOUT = ~0x42; delay_ms(300);
             PAOUT = ~0x81; delay_ms(300);
-        } else if((sensorL == 0) && (sensorC != 0) && (sensorR != 0)) {
+        } else if((sensorL != 0) && (sensorC == 0) && (sensorR == 0)) {
             PAOUT = ~0x99; delay_ms(200);
             PAOUT = ~0x3C; delay_ms(200);
             PAOUT = ~0x66; delay_ms(200);
             PAOUT = ~0xC3; delay_ms(200);
-        } else if((sensorL != 0) && (sensorC == 0) && (sensorR == 0))
+        } else if((sensorL == 0) && (sensorC != 0) && (sensorR != 0))
             PAOUT = ~0x99;
-        else if((sensorL != 0) && (sensorC == 0) && (sensorR != 0))
+        else if((sensorL == 0) && (sensorC != 0) && (sensorR == 0))
             PAOUT = ~0x66;
-        else if((sensorL != 0) && (sensorC != 0) && (sensorR == 0))
+        else if((sensorL == 0) && (sensorC == 0) && (sensorR != 0))
             PAOUT = ~0x96;
-        else if((sensorL != 0) && (sensorC != 0) && (sensorR != 0))
+        else if((sensorL == 0) && (sensorC == 0) && (sensorR == 0))
             PAOUT = ~0x00;
     }
 }
