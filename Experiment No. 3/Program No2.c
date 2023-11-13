@@ -68,7 +68,7 @@ void initADC0() {
 }
 
 unsigned int analogRead(void) {
-    ACT |= ENABLE;
+    ACTL |= ENABLE;
     while(ACTL&ENABLE);
     return (((unsigned int) ADHR << 2) | (ADLR >> 6));
 }
