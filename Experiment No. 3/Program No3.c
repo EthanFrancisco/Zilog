@@ -23,7 +23,7 @@ void main() {
     dValue = analogRead1();
     printf("0x%03X\n", dValue);
     while(1) {
-        delay(100);
+        delay_ms(100);
         dValue = analogReadn();
         printf("0x%03X\r", dValue);
     }
