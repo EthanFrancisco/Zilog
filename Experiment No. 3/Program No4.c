@@ -18,7 +18,7 @@ void main() {
     init_uart(_UART0, _DEFFREQ, _DEFBAUD);
     select_port(_UART0);
     while(1) {
-        ACTL != 0x80;
+        ACTL |= 0x80;
         delay_ms(1000);
     }
 }
