@@ -8,7 +8,7 @@
 #define CHANNEL0    0x00
 #define MODE    0x00
 #define VREF    0x00
-#define ENABLE  0x00
+#define ENABLE  0x80
 
 void initADC3(void);
 void initADC2(void);
