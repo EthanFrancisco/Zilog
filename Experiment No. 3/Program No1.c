@@ -5,7 +5,7 @@
 #define CHANNEL 0x00
 #define MODE    0x00
 #define VREF    0x00
-#define ENABLE  0x00
+#define ENABLE  0x80
 
 void initADC(void);
 unsigned int analogRead(void);
