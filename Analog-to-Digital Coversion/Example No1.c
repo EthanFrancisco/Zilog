@@ -10,7 +10,7 @@
 #define VREF    0x20
 #define MODE    0x00
 #define CHANNEL 0x01
-#define CHANNEL 0x80
+#define CEN     0x80
 
 void Init_ADC(void);
 unsigned int PollADC(void);
