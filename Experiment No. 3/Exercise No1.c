@@ -2,7 +2,7 @@
 #include <sio.h>
 #include <stdio.h>
 
-#define CHANNEL 0x05
+#define CHANNEL 0x04
 #define MODE    0x00
 #define VREF    0x00
 #define ENABLE  0x80
@@ -12,7 +12,7 @@ void delay_ms(unsigned int delay);
 unsigned int analogRead(void);
 
 void main() {
-    unsigned int dValue = 0;
+    unsigned int dValue;
 
     PADD = 0x00;
     PAAF = 0x00;
