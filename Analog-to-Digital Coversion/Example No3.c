@@ -27,7 +27,7 @@ void main() {
     VALUE = PollADC1();
     printf("0x%03X\n", VALUE);
     while(1) {
-        delay(100);
+        delay_ms(100);
         VALUE = PollADCn();
         printf("0x%03X\r", VALUE);
     }
